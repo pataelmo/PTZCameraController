@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>687</width>
+    <height>606</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PTZ Controller</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="buttonUp">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>320</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Up</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonRight">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>390</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Right</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonDown">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>460</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Down</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonLeft">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>390</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Left</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderPanSpeed">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>350</y>
+      <width>21</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksAbove</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderZoomSpeed">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>350</y>
+      <width>21</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>7</number>
+    </property>
+    <property name="pageStep">
+     <number>2</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksAbove</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonZoomIn">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>350</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>In</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonZoomOut">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>450</y>
+      <width>80</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Out</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderPanControl">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>140</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-20</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="pageStep">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBelow</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderTiltControl">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>50</y>
+      <width>31</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-20</number>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="pageStep">
+     <number>5</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksAbove</enum>
+    </property>
+    <property name="tickInterval">
+     <number>1</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>687</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPTZ_Controller">
+    <property name="title">
+     <string>PTZ Controller</string>
+    </property>
+    <addaction name="actionSettings"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuPTZ_Controller"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
